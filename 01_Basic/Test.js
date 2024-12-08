@@ -1,4 +1,4 @@
-//  Number Guessing Game 
+//  Number Guessing Game only using in node.js not browser or here
 let GamNum = 50;
 let UserNum = prompt("Guess the Game Number")
 while (UserNum != GamNum) {
