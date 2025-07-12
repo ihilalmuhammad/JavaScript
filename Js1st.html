@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Basics</title>
+  </head>
+  <body>
+    <div>
+     <h1> Hi, this is my first JavaScript file.</h1>
+      <p>Welcome to the world of JavaScript!</p>
+      <p>
+        JavaScript is a versatile programming language used for web development.
+      </p>
+      <p>It allows you to create dynamic and interactive web pages.</p>
+    </div>
+    <button>submit</button>
+    <script>
+      alert("Hello, this is my first JavaScript file!");
+    var a = prompt("Please enter your name:");
+    while (a === null || a.trim() === "") {
+      a = prompt("Name is required. Please enter your name:");
+    }
+      console.log("Your Name is " + a);
+      document.querySelector("button").addEventListener("click", function () {
+        alert("Button clicked!");
+      });
+    </script>
+  </body>
+</html>
