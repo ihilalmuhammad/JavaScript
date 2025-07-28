@@ -1,0 +1,55 @@
+<!-- 📚 What is DOM?
+DOM stands for Document Object Model.
+
+The DOM is a tree-like structure created by the browser when it loads an HTML page. It represents the page so that JavaScript can access and manipulate it.
+
+Think of it like this:
+
+🧱 HTML is the structure of your web page
+🧠 DOM is the brain's version of that structure — so JavaScript can talk to it -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+<body>
+    <h1 class="title">JavaScript DOM</h1>
+    <p class="description">This is a simple JavaScript DOM manipulation example.</p>
+    <button id="changeTextButton">Change Text</button>
+    <script>
+        document.body.style.backgroundColor = 'lightgray';
+        // Change the color of the title and font size of the description
+        document.getElementsByClassName('title')[0].style.color = 'blue';
+        document.getElementsByClassName('description')[0].style.fontSize = '15px';
+        document.getElementById('changeTextButton').addEventListener('click', function() {
+            document.getElementsByClassName('title')[0].textContent = 'Text Changed!';
+            document.getElementsByClassName('description')[0].textContent = 'The text has been changed successfully.';
+        });
+// practice question
+//Write a program to calculate factorial of a number using reduce and using for loop.
+
+// Here’s the solution in JavaScript, using both methods:
+        function factorialUsingForLoop(n) {
+            let result = 1;
+            for (let i = 1; i <= n; i++) {
+                result *= i;
+            }
+            return result;
+        }
+
+        function factorialUsingReduce(n) {
+            return Array.from({ length: n }, (_, i) => i + 1).reduce((acc, curr) => acc * curr, 1);
+        }
+
+        // Example usage:
+        console.log(factorialUsingForLoop(5)); // Output: 120
+        console.log(factorialUsingReduce(5)); // Output: 120
+    </script>
+
+
+  
+</body>
+</html>
