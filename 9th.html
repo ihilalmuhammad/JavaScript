@@ -1,0 +1,55 @@
+<!-- 🧩 Key Concepts: Parent, Children, and Siblings in DOM
+When we say HTML is like a tree, that means:
+
+Each tag (like <div>, <p>, <h1>, etc.) is a node
+
+Nodes are related like a family:
+
+🧒 Children: Tags inside a tag
+
+👨 Parent: Tag that wraps other tags
+
+🧍‍♂️🧍‍♀️ Siblings: Tags at the same level (same parent) -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #parent p{
+        background-color: lightblue;
+        padding: 10px;
+        margin: 5px;
+        width: 100px;
+        height: 50px;
+        border: 2px solid black;
+        border-radius: 5px;
+      }
+      .sibling {
+        background-color: lightgreen;
+        padding: 10px;
+        margin: 5px;
+        width: 100px;
+        height: 50px;
+        border: 2px solid black;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="parent">
+      <p>Paragraph 1</p>
+      <p>Paragraph 2</p>
+    </div>
+
+    <div class="sibling">Sibling 1</div>
+    <div class="sibling">Sibling 2</div>
+    <div class="sibling">Sibling 3</div>
+    <script>
+      let parent = document.getElementById("parent");
+      console.log(parent.children); // HTMLCollection of p elements
+    </script>
+  </body>
+</html>
