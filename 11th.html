@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello, World!</h1>
+    <p>This is a simple HTML document.</p>
+    <div class="container">
+        <p>This is a paragraph inside the container.</p>
+    </div>
+    <button onclick="addelement()">Add Element</button>
+    <button onclick="removeElement()">Remove Element</button>
+    <script>
+        function addelement() {
+            let newelement = document.createElement("h4");
+            newelement.innerHTML = "New Element Was Added";
+            document.body.appendChild(newelement);
+        }
+
+        function removeElement() {
+            let elements = document.getElementsByTagName("h4");
+            if (elements.length > 0) {
+                document.body.removeChild(elements[elements.length - 1]);
+            }
+        }
+    </script>
+</body>
+</html>
